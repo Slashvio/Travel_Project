@@ -1,0 +1,410 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@import '_fonts.scss';
+@import '_mixins.scss';
+@import '_normalize.scss';
+@import '_variebles.scss';
+
+// header menu style
+
+.menu {
+    background: #5474fd;
+    height: 78px;
+    width: 100%;
+}
+.menu-wrap {
+    display: flex;
+    justify-content: space-around;
+     align-items: center;
+     padding: 0 calc(50vw - 585px);
+     @media screen and (max-width: 768px){
+         flex-direction: column-reverse;
+         padding: 3px;
+     }
+    p{
+        @include logo-style;
+        @media screen and (min-width: 992px) {
+        font-size: 24px;
+        line-height: 42px;
+        }
+        @media screen and (max-width: 991px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width: 768px){
+            font-size: 18px;
+            margin: 5px;
+        }
+
+    }
+}
+
+.menu-wrap-nav{
+    display: flex;
+    list-style-type: none;
+    width: 45%;
+    justify-content: space-around;        
+    @media screen and (max-width: 768px){
+        width: 100%;
+    }
+
+    li {
+        @media screen and (max-width: 768px){
+            line-height: 28px;
+        }
+        a{
+            @include nav-style;
+            @media screen and (min-width: 991px) {
+            font-size: 14px;
+            }
+            @media screen and (min-width:768px) and (max-width: 991px) {
+                font-size: 11px;
+            }
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+                text-transform: none;
+
+            }
+        }
+    }
+}
+
+
+
+
+// first section style
+
+.anywhere-wrap {
+    background: url(../img/Background1.png);
+    @include background;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .anywhere-section {
+        width: 60%;
+    h2 {
+        font-size: 48px;
+        @include logo-style;
+        margin: 0;
+        @media screen and (min-width: 991px){
+            font-size: 48px;  
+        }
+        @media screen and (max-width: 768px){
+            font-size: 38px;  
+        }
+
+    }
+    p {
+        font-size: 22px;
+        @include small-text;
+    }
+}
+}
+.anywhere-block-form {
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 991px){
+        flex-direction: column;
+        align-items: center;
+    }
+    @media screen and (min-width: 991px){
+        height: 60px;
+    }
+
+input{
+    color: #999999;
+    text-align: center;
+    width: 80%;
+    padding: 0px;
+    @include input-small-text;
+    font-size: 18px;
+    @media screen and (min-width: 991px){
+        width: 80%;
+    }
+    @media screen and (max-width: 991px){
+        width: 99%;
+        height: 60px;
+        letter-spacing: 1px;
+    }
+    @media screen and (max-width: 768px){
+        font-size: 16px;
+    }
+}
+}
+.anywhere-block-form button {
+    background: $blue;
+    border: none;
+    padding: 0px;
+    @include nav-style;
+    font-size: 14px;
+    @media screen and (min-width: 991px){
+        width: 20%;
+        flex-basis: 140px;
+    }
+    @media screen and (max-width: 991px){
+        width: 100%;
+        height: 60px;
+    }
+
+}
+.anywhere-block-form button:hover,
+.anywhere-block-form button:checked{
+    background: #4665e8;
+    cursor: pointer;
+}
+.anywhere-scroll {
+    height: 139px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+    display: flex;
+    flex-direction: column;
+    @include small-text;
+    text-decoration: none;
+    font-size: 14px;
+    }
+}
+
+// second section style 
+
+.about-wrap {
+    background: url(../img/Background2.png);
+    @include background;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.about-text{
+    flex-basis: 450px;
+    margin: 20px;
+    @media screen and (max-width:992px){
+        text-align: center;
+        }
+    
+    h4 {
+        @include nav-style;
+        font-size: 36px;
+    }
+    p {
+        font-size: 16px;
+        @include regular-text;
+    }
+    button {
+        @include button;
+    }
+    button:hover {
+        @include button-hov;
+    }
+}
+
+.about-img {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    flex-basis: 450px;
+    @media screen and (max-width:992px){
+    align-items: center;
+    }
+
+}
+.about-img img:nth-child(2) {
+    margin-top: 6px;
+    @media screen and (min-width:992px){
+        align-self: flex-end;
+    }
+}
+.about-img img {
+    width: 90%;
+}
+
+// third section style
+
+.places-wrap {
+    background: #333333;
+    width: 100%;
+    min-height: 250px;
+    padding: 22px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    .places-content {
+        min-width: 250px;
+        
+        a {
+            text-decoration: none;
+            i {
+                font-size: 50px;
+                color: $blue;
+            }
+            i:hover {
+                color: #ff6363;
+            }
+            p {
+                font-size: 36px;
+                @include nav-style;
+                text-transform: none;
+            }
+        }
+    }
+}
+
+//forth section style 
+.country-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.country-wrap__first {
+    background: url(../img/Background3.png);
+    @include background;
+
+}
+.country-wrap__second {
+    background: url(../img/Background4.png);
+    @include background;
+    display: flex;
+    @media screen and (min-width:992px) {
+    justify-content: flex-end;
+    }
+
+}
+
+.country-content {
+    @media screen and (min-width:992px) {
+    width: 60%;
+    }
+    .country-content-block {
+        @media screen and (min-width:992px) {
+        width: 50%;
+    }
+    @media screen and (max-width:991px) {
+        text-align: center;    
+}
+        background: #00000086;
+        padding: 30px 20px;
+
+        .content-block-p__bigger {
+            font-size: 20px;
+            @include regular-text;
+        }
+        .content-block-p__grand {
+           @include regular-text;
+           font-size: 20px;
+        }
+        .content-block-p__smaller {
+            @include regular-text;
+            font-size: 16px;
+        }
+        button {
+            @include button;
+        }
+        button:hover {
+            @include button-hov;
+        }
+    }
+}
+// .left {
+//     float: left;
+// }
+// .right{
+//     float: right;
+// }
+
+.feedback-wrap {
+    background: url(../img/Background5.png);
+    @include background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4 {
+            @include nav-style;
+            @media screen and (max-width:991px) {
+            text-align: center;
+            }
+    }
+    .feedback-content {
+        display: flex;
+        justify-content: center;
+        @media screen and (min-width:992px) {
+            width: 80%;
+        }
+        @media screen and (max-width:991px) {
+        flex-wrap: wrap;
+        }
+        img {
+            @media screen and (min-width:992px) {
+                max-width: 380px;
+            }
+            @media screen and (max-width:991px) {
+                width: 100%;
+
+            }
+        }
+        .feedback-content-block {
+            background: #333333;
+            padding: 40px;
+            &__bigger {
+            font-size: 20px;
+            @include regular-text;
+            text-transform: uppercase;
+
+        }
+        &__smaller::before {
+            content: "\201c";
+            color: #5474fd;
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        &__smaller {
+            @include regular-text;
+            line-height: 22px;
+        }
+        }
+    }
+}
+
+// style for footer
+.footer-wrap {
+    background: #232323;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 24px;
+        letter-spacing: 3px;
+        @include logo-style;
+        margin: 10px;
+    }
+    span {
+        font-size: 16px;
+        letter-spacing: 1px;
+        @include regular-text;
+        margin-bottom: 20px;
+    }
+    a {
+        color: $color;
+        margin: 0 10px;
+    }
+    a:hover,
+    a:checked {
+        color: $hover-blue;
+    }
+}

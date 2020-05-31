@@ -1,0 +1,47 @@
+@mixin logo-style {
+    text-transform: $logo-style;
+    font-family: $logo-text;
+    color: $color;
+}
+@mixin nav-style {
+    text-transform: $logo-style;
+    font-family: $main-text;
+    color: $color;
+    text-decoration: none;
+
+}
+@mixin small-text {
+    font-family: $small-text;
+    letter-spacing: 7px;
+    color: $color;
+}
+@mixin input-small-text {
+    font-family: $small-text;
+    letter-spacing: 7px;
+}
+@mixin regular-text {
+    font-family: $small-text;
+    color: $color;
+}
+@mixin background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 630px;
+    background-size: cover;
+}
+@mixin button {
+    width: 200px;
+    height: 50px;
+    background: $blue;
+    border: none;
+    margin-top: 50px;
+    color: $color;
+    @include nav-style;
+    font-size: 14px;
+    text-decoration: none;
+}
+@mixin button-hov {
+    background: $hover-blue;
+    box-shadow: 1px 3px 14px 3px #2b2a2af2;
+}
